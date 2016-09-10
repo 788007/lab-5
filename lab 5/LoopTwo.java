@@ -1,16 +1,14 @@
 
 /**
- *@ Laurel Woods 
+ * @Laurel Woods 
  * @lab 5 9/9
  */
 import java.util.Arrays;
 public class LoopTwo
 {
-    private int n;
     private int[] nums;
-    private String printList = "";
     public LoopTwo(int n){
-        int[] nums = new int[n];
+        nums = new int[n];
     }
     public void loadRandom() {
         for (int i = 0; i < nums.length; i++) {
@@ -28,8 +26,13 @@ public class LoopTwo
         return ((double)(sum)) /((double)(nums.length));
     }
     public String printArray(){
-        for (int j = 0; j < n; j++) {
-            printList = printList + nums[j] + "\t";
+		String printList = "";
+        for (int j = 0; j < nums.length; j++) {
+			if((j + 1)% 10 == 0) {
+				 printList = printList + nums[j] + "\n";
+			}else {
+					 printList = printList + nums[j] + "\t";
+				}
         }
         return printList;
     }

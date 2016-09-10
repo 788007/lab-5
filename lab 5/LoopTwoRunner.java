@@ -5,14 +5,14 @@
  */
 public class LoopTwoRunner
 {
-   
     public static void main(String[] args){
-        int n = 20;
+        int n = 30;
         LoopTwo loop = new LoopTwo(n);
         loop.loadRandom();
+		System.out.println(loop.printArray());
         loop.sortArray();
-        System.out.println(loop.printArray());
-        System.out.println("The Average is " + loop.findAverage());
+        System.out.println("\n" + loop.printArray());
+        System.out.println("\n" + "The average is " + loop.findAverage());
         
     }
 }
